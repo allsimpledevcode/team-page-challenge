@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #333333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.brand {
+  font-family: 'PT Serif', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+}
+
+
+.wrapper {
+  max-width: 980px;
+  margin: auto;
+}
+
+header, main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 14px;
+}
+
+.flex-2 {
+  flex: 2;
+  max-width: 326px;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+main > figure:nth-child(3n+2) {
+  margin-top: 120px;
+}
+
+figure {
+  max-width: 28.33%;
+  padding: 22px;
+  position: relative;
+}
+
+figure > p {
+  position: absolute;
+  top: 52px;
+  right: -28px;
+  transform: rotate(90deg);
+  text-align: right;
+}
+
+figure:first-child > p {
+  right: -43px;
+  top: 64px;
+}
+
+figure:before{
+  content: attr(data-name);
+  position: absolute;
+  top: 62px;
+  right: -43px;
+  transform: rotate(90deg);
+}
+
+figure > figcaption {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+@media only screen and (max-width: 850px) {
+  header {
+    flex-direction: column;
+    max-width: 326px;
+    margin: auto;
+  }
+
+  main > figure:nth-child(3n+2) {
+      margin-top: initial;
+  }
+  main > figure:nth-child(odd) {
+    margin-bottom: 30px;
+  }
+
+  main > figure:nth-child(even) {
+    margin-top: 30px;
+  } 
+
+  header > div:first-child {
+    margin-bottom: 30px;
+  }
+  main {
+    justify-content: center;
+  }
+  figure {
+    max-width: 27.33%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  figure {
+    max-width: 34.33%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  figure {
+    max-width: 100%;
+  }
+  main > figure:nth-child(odd) {
+    margin-bottom: 10px;
+  }
+  main > figure:nth-child(even) {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+}
